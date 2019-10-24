@@ -1,0 +1,39 @@
+/* INDEX.HTML */
+body {
+    background: url('img/bground.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+
+.nav-backgr {
+    background-color: rgba(135,206,250, 0.5);
+}
+
+.navbar {
+  height: 100px;
+}
+
+h1, h2, h3 {
+  font-family: 'Modak', cursive;
+}
+
+
+.info {
+  margin-left: 15px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.temp_back {
+  padding: 2px 8px 2px 8px;
+  background-color: lightskyblue;
+  border-radius: 10px;
+}
+
+.alert {
+  margin-top: 15px;
+}
