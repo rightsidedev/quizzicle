@@ -1,12 +1,25 @@
-from flask import Flask
+'''
+Quizzicle App 
+Written by Mandy Kopelke and Anne Holman for CSB2019
 
-## Initialise Flask app and read config files
+API & Flask Team Project, Term 2
+Uses the Open Trivia Database API, more info at: https://opentdb.com/
+
+This module defines the routes required to control the app. 
+
+'''
+from flask import Flask, render_template
+import classes
+
+## Initialise Flask app
 app = Flask(__name__)
-from app import views
-from dotenv import load_dotenv
-import os
 
-## Set up environment variables from applications .env file
-APP_ROOT=os.path.join(os.path.dirname(__file__), "..") # application root dir
-dotenv_path=os.path.join(APP_ROOT, ".env")
-load_dotenv(dotenv_path)
+## Route that displays the Quizzicle landing page
+@app.route("/index/")
+@app.route("/")
+def start_app():
+    '''
+    Delivers the application index HTML page to the calling browser
+    '''
+    
+    return render_template("index.html")

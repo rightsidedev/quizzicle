@@ -18,10 +18,9 @@ class Questions():
     '''
     Questions Class defines the blueprint for a questions object
     '''
-
     def __init__(self):
         self.question = ""
-        self.correct_answer = ""
+        self.answer = ""
 
     def get_questions(self):
         '''
@@ -35,5 +34,5 @@ class Questions():
             data_found = True
             for loop in range(10):
                 self.question = questions['results'][loop]['question']
-                self.correct_answer = questions['results'][loop]['correct_answer']
+                self.answer = questions['results'][loop]['correct_answer']
         return data_found, status_code
